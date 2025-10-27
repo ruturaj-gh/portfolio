@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for better aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* Gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8a2be2, #4c1d95); /* Purple gradient */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #9333ea, #5b21b6); /* Darker purple gradient on hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0d1117; /* Dark background */
+  color: #e2e8f0; /* Light text */
+  overflow-x: hidden; /* Prevent horizontal scroll due to 3D */
+}
+
+/* Ensure sections take full width and min-height if needed */
+section {
+  width: 100vw;
+  min-height: 80vh; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Hide any overflow from content */
+}
+
+/* Add some padding to sections for better spacing, adjust if your sections have internal padding */
+#hero {
+  min-height: 100vh;
+  padding-top: 80px; /* Space for fixed header */
+}
+
+#experience, #projects, #resume, #contact {
+  padding-top: 80px; /* Space for fixed header */
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background: #a78bfa !important; /* Tailwind purple-400 */
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #c084fc !important; /* Tailwind purple-500 */
+  opacity: 1 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #a78bfa !important; /* Tailwind purple-400 */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #c084fc !important; /* Tailwind purple-500 */
+  opacity: 1;
+}
+
+/* Adjust button size for navigation on smaller screens */
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    transform: scale(0.8);
+  }
+}

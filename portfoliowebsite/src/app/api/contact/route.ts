@@ -51,11 +51,11 @@ export async function POST(req: Request) { // <-- This export POST function is c
     console.log('Error in contact form submission:', error);
     if (error instanceof z.ZodError) {
       // Zod validation errors
-      console.error('Validation error in contact form:', error.errors);
-      return NextResponse.json({ message: 'Validation failed', errors: error.errors }, { status: 400 });
+      console.error('Validation error in contact form:', error);
+      return NextResponse.json({ message: 'Validation failed', errors: error }, { status: 400 });
     } else {
       console.error('Error processing contact form:', error);
-      return NextResponse.json({ message: 'Failed to send message.', error: error.message }, { status: 500 });
+      return NextResponse.json({ message: 'Failed to send message.', error: error }, { status: 500 });
     }
   }
 }

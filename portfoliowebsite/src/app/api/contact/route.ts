@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/app/api/contact/route.ts
 import { NextResponse } from 'next/server';
 import { sendContactEmail } from '@/lib/mail';

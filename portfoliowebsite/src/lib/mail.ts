@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import sgMail from '@sendgrid/mail';
 import { ContactFormData } from '@/types';
 

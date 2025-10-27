@@ -24,9 +24,6 @@ export default function ThreeDCanvas() {
           <Environment preset="night" background={false} />
 
           <ThreeDBlobs
-            count={15}
-            speed={0.15}
-            color="#a78bfa" // A synth-wave purple
           />
 
           {/* Optional: OrbitControls for debugging - remove in production */}

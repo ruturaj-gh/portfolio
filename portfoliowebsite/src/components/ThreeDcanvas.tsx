@@ -1,7 +1,6 @@
 // components/layout/ThreeDCanvas.tsx
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import ThreeDBlobs from '../ThreeDBlobs';
+import ThreeDBlobs from './ThreeDBlobs';
 
 export default function ThreeDCanvas() {
   return (

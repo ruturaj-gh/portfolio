@@ -3,7 +3,6 @@
 
 import { ProjectItem } from '@/types';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -95,7 +94,7 @@ export default function Projects() {
             modules={[Pagination, Navigation, Autoplay]}
             className="mySwiper !pb-12" // !pb-12 to make space for pagination dots
           >
-            {projectData.map((project, index) => (
+            {projectData.map((project) => (
               <SwiperSlide key={project.id}>
                 <motion.div
                   variants={cardVariants}
@@ -105,7 +104,6 @@ export default function Projects() {
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold mb-3 text-cyan-300">{project.title}</h3>
                     <p className="text-gray-300 mb-4 flex-grow">{project.description}</p>
-                    // src/components/sections/Projects.tsx (continued)
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.techStack.map((tech, techIndex) => (
                         <span

@@ -1,4 +1,3 @@
-import { throttle } from 'throttle-debounce';
 
 const MAX_REQUESTS_PER_MINUTE = 5; // Max requests allowed
 const WINDOW_SIZE_MS = 60 * 1000; // 1 minute in milliseconds

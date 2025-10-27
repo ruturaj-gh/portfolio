@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 import Images from '@/lib/images';
 export default function Hero() {
-  const profileImageUrl = process.env.NEXT_PUBLIC_PROFILE_IMAGE_URL ;
   const resumePdfUrl = process.env.NEXT_PUBLIC_RESUME_PDF_URL || '/your_resume.pdf';
   const name = "Ruturaj Ghumkar";
   const summary = "I'm a software engineer passionate about building practical, user-friendly solutions. Most of my work has been in frontend and full-stack development, where I enjoy turning ideas into working products. I'm curious, quick to learn, and motivated by solving real problems, not just writing code.";

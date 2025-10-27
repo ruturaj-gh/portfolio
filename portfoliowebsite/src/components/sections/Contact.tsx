@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // src/components/sections/Contact.tsx
 "use client";
 
@@ -10,7 +11,6 @@ import Input from "../ui/Input";
 import Textarea from "../ui/Textarea";
 import Button from "../ui/Button";
 import { ContactFormData } from "@/types";
-import { form } from "framer-motion/client";
 
 // Client-side validation schema
 const contactFormSchema = z.object({
